@@ -230,7 +230,7 @@ class pmJobUtil(object):
       creationtDict = self.creationtDict()
       jobid = job['PandaID']
       attempt  = job.get('attemptNr',0)
-      if  attempt>0 and job['parentID']==None and job['jobsetID']!=None:  attempt = 0  # workaround issue #https://savannah.cern.ch/bugs/index.php?91176#comment6
+      if  attempt>0 and job['parentID']==None and job['jobsetID']!=None:  attempt = 0  # workaround issue #https://savannah.XXXXX.ch/bugs/index.php?91176#comment6
       status   = job.get('jobStatus')
       if jsetid != None and not jobsets.has_key(jsetid):
          jobsets[jsetid] = {} 

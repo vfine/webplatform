@@ -9,7 +9,7 @@ from pmState import pmstate
 import pmConfig.pmConfig as config
 from  monitor.nameMappings import nmap
 
-# https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/PandaShiftGuide#Job_state_definitions_in_Panda
+# https://twiki.aaaa.ch/twiki/bin/viewauth/aaaaComputing/PandaShiftGuide#Job_state_definitions_in_Panda
 # select distinct jobstatus from jobsdefined4;
 # select distinct jobstatus from jobswaiting4;
 # select distinct jobstatus from jobsactive4;
@@ -26,10 +26,10 @@ jediTaskStates= (  'registered', 'waiting','defined', 'pending', 'assigning', 'r
                  )
 for ts in  jobTables:
    for i,t in enumerate(ts):
-     ts[i] = 'ATLAS_PANDA.jobs%s4' % t
+     ts[i] = 'aaaa_PANDA.jobs%s4' % t
       
 jobStateTables =  dict(zip(jobStates,jobTables))
-jobTablesOld = 'ATLAS_PANDAARCH.JOBSARCHIVED'
+jobTablesOld = 'aaaa_PANDAARCH.JOBSARCHIVED'
 #________________________________________________________________________________________
 def isJob(job,type='analysis'):
    """ Check the job type [ production | 'analysis" | None ] """
@@ -628,5 +628,5 @@ def zipo(dict,oracleDict=None,delim=' AND ', quote=True,ops=' = '):
       zipped = delim.join(set(d))
    return zipped
    
-def atlasLogBook():
-   return 'https://atlas-logbook.cern.ch/elog/ATLAS+Computer+Operations+Logbook'
+def aaaaLogBook():
+   return 'https://aaaa-logbook.aaaa.ch/elog/aaaa+Computer+Operations+Logbook'

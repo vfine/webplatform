@@ -562,7 +562,7 @@ class pmDb(object):
 #______________________________________________________________________________________      
 if __name__ == '__main__':
    def getJobRecords(where, selection):
-       query = "select %s from ATLAS_PANDA.JOBSARCHIVED4 where %s" % ( selection, where ) 
+       query = "select %s from aaaa_PANDA.JOBSARCHIVED4 where %s" % ( selection, where ) 
        return query 
    sql = pmDb()
    rows = sql.fetchallh(getJobRecords("1=1","distinct jobstatus"))

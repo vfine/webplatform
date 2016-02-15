@@ -117,9 +117,9 @@ class pmBrowser(pmModule):
 
    #    if os.environ.has_key('HOSTNAME'): htmlstr += "<br> &nbsp; &nbsp; Host: %s" % os.environ.get("HOSTNAME")
        htmlstr += """
-   <br> &nbsp; &nbsp; <a href='https://savannah.cern.ch/bugs/?func=additem&group=panda'>Report a problem</a>
-        &nbsp; &nbsp; <a href='mailto:hn-atlas-dist-analysis-help@cern.ch'>Email list for help</a>
-   <br> &nbsp; &nbsp; <a href='mailto:atlas-adc-pandamon-support@cern.ch'>Webmaster</a></div>
+   <br> &nbsp; &nbsp; <a href='https://savannah.XXXXX.ch/bugs/?func=additem&group=panda'>Report a problem</a>
+        &nbsp; &nbsp; <a href='mailto:hn-aaaa-dist-analysis-help@XXXXX.ch'>Email list for help</a>
+   <br> &nbsp; &nbsp; <a href='mailto:aaaa-adc-pandamon-support@XXXXX.ch'>Webmaster</a></div>
    """
 
        analytics = """
@@ -350,11 +350,11 @@ class pmBrowser(pmModule):
         <div class="jedititle"><span class="jedititle">JEDI is the default analysis backend since August 12 2014!</span></div>
         <br/><br/>
         JEDI tasks/jobs can be monitored on 
-        <a href="http://bigpanda.cern.ch/" target="_blank">http://bigpanda.cern.ch/</a>. <br/>
+        <a href="http://bigpanda.XXXXX.ch/" target="_blank">http://bigpanda.XXXXX.ch/</a>. <br/>
         Submission to JEDI is the default setup using Panda/Ganga tools from CVMFS since August 12, 2014!<br/>
         <br/>
         JEDI instruction are available on TWiki
-        <a href="https://twiki.cern.ch/twiki/bin/view/PanDA/PandaJediAnalysis"
+        <a href="https://twiki.XXXXX.ch/twiki/bin/view/PanDA/PandaJediAnalysis"
     target="_blank">PandaJediAnalysis</a>.
         <br/><br/><br/><br/>
     </td>

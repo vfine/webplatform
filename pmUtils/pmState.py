@@ -142,7 +142,7 @@ class pmState:
            self.callback = self.params['CALLBACK']
            del self.params['CALLBACK']
         else:
-            self.VO = 'ATLAS'
+            self.VO = 'aaaa'
 
 import threading
 pandaStates = {}
