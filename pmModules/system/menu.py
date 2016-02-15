@@ -30,7 +30,7 @@ class menu(pmModule):
       try:
          classicUrl=self.config().config.classic['url']
       except:
-         classicUrl = "http://panda.cern.ch"
+         classicUrl = "http://panda.XXXXX.ch"
       indent = "<div style='padding-top:5px;'></div>"
       htmlstr = ''   
       # htmlstr += "<table class='ui-corner-top ui-widget ui-widget-header' width='100%'><thead><tr><th align=left>" +"Classic PanDA"+ "</th></tr></thead></table>";
@@ -118,7 +118,7 @@ class menu(pmModule):
       gap = "<tr><td width='5px'></td>"
       jobheader = "Jobs' Metrics"
       jobhtml  = "<p><b>&nbsp;"
-      jobhtml  += '<a title="Q:What are the jobMetrics?" href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/PandaPilot#QaJobMetrics">'
+      jobhtml  += '<a title="Q:What are the jobMetrics?" href="https://twiki.XXXXX.ch/twiki/bin/viewauth/aaaaComputing/PandaPilot#QaJobMetrics">'
       jobhtml  += "VM Metrics:</a></b>"
       jobhtml +='<table>'
       for i,t in enumerate(types):
@@ -149,7 +149,7 @@ class menu(pmModule):
       gap = "<tr><td width='5px'></td>"
       jobheader = "Jobs' Timing"
       jobhtml  = "<p>&nbsp;"
-      jobhtml  += '<a title="Q:Which are the timings in pilotTiming?" href="https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/PandaPilot#QaPilotTiming">'
+      jobhtml  += '<a title="Q:Which are the timings in pilotTiming?" href="https://twiki.XXXXX.ch/twiki/bin/viewauth/aaaaComputing/PandaPilot#QaPilotTiming">'
       jobhtml  += '<b>Timing:<b></a>'
       jobhtml +='<table>'
       for i,t in enumerate(types):
@@ -176,7 +176,7 @@ class menu(pmModule):
       try:
          classicUrl=self.config().config.classic['url']
       except:
-         classicUrl = "http://panda.cern.ch"
+         classicUrl = "http://panda.XXXXX.ch"
       indent = "<div style='padding-top:5px;'></div>"
       htmlstr = ''   
       # htmlstr += "<table class='ui-corner-top ui-widget ui-widget-header' width='100%'><thead><tr><th align=left>" +"Classic PanDA"+ "</th></tr></thead></table>";
@@ -191,7 +191,7 @@ class menu(pmModule):
       jobhtml += "</tr>"
       jobhtml +=gap
       jobhtml += "<td style='font-size:8pt;'><a href='%(url)s%(version)s/jobinfo?jobtype=analysis&prodUserName=auto&hours=24'>My Jobs</a></td>" % { 'version': version.replace("http:","https:") ,"url" : self.server().host().replace('http:','https:')}      
-      jobhtml += "<td style='font-size:8pt;'><a href='%(version)s/jobinfo?jobtype=*&VO=atlas&limit=150'>ATLAS Jobs</a></td>" % { 'version': version  }
+      jobhtml += "<td style='font-size:8pt;'><a href='%(version)s/jobinfo?jobtype=*&VO=aaaa&limit=150'>aaaa Jobs</a></td>" % { 'version': version  }
       jobhtml += "</tr>"
 #      jobhtml +=gap
 #      jobhtml += "<td style='font-size:8pt;'><a href='%(url)s%(version)s/jobinfo?jobtype=analysis&JediTaskID=nonull&hours=24'>Jedi Jobs</a></td>" % { 'version': version.replace("http:","https:") ,"url" : self.server().host().replace('http:','https:')}      
@@ -331,7 +331,7 @@ class menu(pmModule):
       operatiohtml += "<br>&nbsp;&bull;&nbsp;<a target='_classic' title='Information on Panda-based analysis using pathena'  href='%s?dash=analysis'>Analysis</a>" % classicUrl
       operatiohtml += "<hr>"
       operatiohtml += "<br>&nbsp;&bull;&nbsp;<a title='Summary of the Panda-based CMS analysis jobs'  href='%(version)s/cloudsummary?jobtype=analysis&VO=cms'>Analysis (CMS)</a>" % { 'version': version }
-      operatiohtml += "<br>&nbsp;&bull;&nbsp;<a title='Summary of the Panda-based ATLAS analysis jobs'  href='%(version)s/cloudsummary?jobtype=analysis&VO=atlas'>Analysis (ATLAS only)</a>" % { 'version': version }
+      operatiohtml += "<br>&nbsp;&bull;&nbsp;<a title='Summary of the Panda-based aaaa analysis jobs'  href='%(version)s/cloudsummary?jobtype=analysis&VO=aaaa'>Analysis (aaaa only)</a>" % { 'version': version }
       operatiohtml += "<hr>"
       operatiohtml += "&nbsp;&bull;&nbsp;<a target='_classic' title='Organization and task assignment of clouds (Tier 1 + Tier 2/3s) processing Panda jobs' href='%s?dash=clouds'>Clouds</a>" % classicUrl
       operatiohtml += "<br>&nbsp;&bull;&nbsp;<a title='PanDA Clouds&#39; Specifications' href='%(version)s/taskBuffer?method=getCloudList'>Clouds&#39; Spec</a>" % { 'version': version }
@@ -343,7 +343,7 @@ class menu(pmModule):
       operatiohtml += "&nbsp;&bull;&nbsp;<a title='Release Availability at Sites' href='%(version)s/releaseinfo'>Releases</a>" % { 'version': version }
       operatiohtml += "<br>&nbsp;&bull;&nbsp;<a target='_classic' title='AutoPilot Pilot/Scheduler System. Pilot Submission System Serving All of OSG and LCG' href='%s?tp=main'>AutoPilot</a>" % classicUrl
       operatiohtml += "<br>&nbsp;&bull;&nbsp;<a target='_classic' title='Summary of DDM systems information and tools' href='%s?dash=ddm'>DDM</a>" % classicUrl
-      operatiohtml += "<br>&nbsp;&bull;&nbsp;<a target='_classic'title='Centralized excluded sites in DDM production' href='%s/blacklisted_production.html'>Blacklisted Sites</a>" % "http://bourricot.cern.ch"
+      operatiohtml += "<br>&nbsp;&bull;&nbsp;<a target='_classic'title='Centralized excluded sites in DDM production' href='%s/blacklisted_production.html'>Blacklisted Sites</a>" % "http://bourricot.XXXXX.ch"
       operatiohtml += "<br>&nbsp;&bull;&nbsp;<a target='_classic' title='Panda DQ2 dataset mover status. Monitors Panda jobs that replicate datasets using dq2-cr' href='%s?ddm=dash'>DQ2 DS Mover</a>" % classicUrl
       operatiohtml += "<hr>"
       operatiohtml += "&nbsp;&bull;&nbsp;<a title='Recent Panda Analysis Users' href='%(version)s/listusers'>Users</a>" % { 'version': version }
@@ -390,7 +390,7 @@ class menu(pmModule):
       taskhtml += "<br>&nbsp;<a href='%s?mode=tinfoSearch'>Task overview query</a>" % classicUrl
       taskhtml += "<form method=GET style='margin-top:0; margin:0; border:0; font-size:8pt;' \
       action='%s'>&nbsp;Clone Task&nbsp;<input  title='Please,provide the TaskID to clone' style='margin-top:0; margin:0; border:1; \
-      font-size:8pt;' type=text border=0 name=tid size=6 maxlength=7></form>" % "https://pandamon.cern.ch/tasks/clonetask"
+      font-size:8pt;' type=text border=0 name=tid size=6 maxlength=7></form>" % "https://pandamon.XXXXX.ch/tasks/clonetask"
       taskhtml += "<br>&nbsp; "
       taskhtml += "</div>"
       button={ "href" : '%s?mode=taskquery' % classicUrl
@@ -400,8 +400,8 @@ class menu(pmModule):
 
       datasetheader = "Datasets"
       datasethtml = divStyle
-      datasethtml += "<p>&nbsp;<a href='https://bourricot.cern.ch/dq2/share/results/'>DQ2 Share Search</a>"
-      datasethtml += "<br>&nbsp;<a href='http://popularity.cern.ch'>DQ2 Popularity</a>"
+      datasethtml += "<p>&nbsp;<a href='https://bourricot.XXXXX.ch/dq2/share/results/'>DQ2 Share Search</a>"
+      datasethtml += "<br>&nbsp;<a href='http://popularity.XXXXX.ch'>DQ2 Popularity</a>"
      
      
       # <form method="POST" action="/dq2/share/results/" name="searchform">
@@ -411,7 +411,7 @@ class menu(pmModule):
 
      
       datasethtml += "<br>&nbsp;<a href='%s?mode=listAbortedDatasetsState'>Aborted datasets</a>" % classicUrl
-      dataset_browser_temp_path = 'http://panda.cern.ch/ddmbrowser/browser'
+      dataset_browser_temp_path = 'http://panda.XXXXX.ch/ddmbrowser/browser'
       # taskhtml += "<br><a href='%s'>Datasets Browser</a>" % dataset_browser_temp_path
       datasethtml += "</div>"
       button={ "href" : '%s?mode=dbquery' % classicUrl
@@ -435,7 +435,7 @@ class menu(pmModule):
       datrihtml += "<br>&nbsp;<a href='%s?mode=listPacballs'>SIT pacballs</a>" % classicUrl
       datrihtml += "<br>&nbsp;<a href='%s?mode=listValidationReplications'>Validation Samples</a>" % classicUrl
       datrihtml += "<br>&nbsp;<a href='%s?mode=listFunctionalTests'>Functional Tests</a>" % classicUrl
-      datrihtml += "<br>&nbsp;<a href='%s?mode=listCR'>ATLAS Data</a>" % classicUrl
+      datrihtml += "<br>&nbsp;<a href='%s?mode=listCR'>aaaa Data</a>" % classicUrl
       datrihtml += "<br>&nbsp;<a href='%s?mode=listReproDSReplications'>Reprocessed_Datasets</a>" % classicUrl
       datrihtml += "</div>"
       htmlstr += utils.addAccordion(datriheader, datrihtml)
@@ -460,11 +460,11 @@ class menu(pmModule):
       # ---------------------- Stats -------------------------------
       dashheader  = "Dashboards"
       dashhtml = divStyle
-      dashhtml += "<br>&nbsp;&bull;&nbsp;<a title='Panda Physics Data Dashboard' href='http://panda.cern.ch/server/pandamon/query?dash=physics'>Physics data</a>" 
-      dashhtml += "<br>&nbsp;&bull;&nbsp;<a title='Production Operator UI' href='http://dashb-atlas-task-prod.cern.ch/templates/task-prod'>Task Production</a>" 
-      dashhtml += "<br>&nbsp;&bull;&nbsp;<a title='Atlas DDM Dashboard' href='http://dashb-atlas-data.cern.ch/dashboard/ddm2/'>DDM Dashboard</a>" 
-      dashhtml += "<br>&nbsp;&bull;&nbsp;<a href='http://dashb-atlas-ssb.cern.ch/dashboard/request.py/siteview'>SSB</a>" 
-      dashhtml += "<br>&nbsp;&bull;&nbsp;<a title='ATLAS Computing and Muon Calibration Center' href='http://www.aglt2.org/csum.php'>AGLT2</a>" 
+      dashhtml += "<br>&nbsp;&bull;&nbsp;<a title='Panda Physics Data Dashboard' href='http://panda.XXXXX.ch/server/pandamon/query?dash=physics'>Physics data</a>" 
+      dashhtml += "<br>&nbsp;&bull;&nbsp;<a title='Production Operator UI' href='http://dashb-aaaa-task-prod.XXXXX.ch/templates/task-prod'>Task Production</a>" 
+      dashhtml += "<br>&nbsp;&bull;&nbsp;<a title='aaaa DDM Dashboard' href='http://dashb-aaaa-data.XXXXX.ch/dashboard/ddm2/'>DDM Dashboard</a>" 
+      dashhtml += "<br>&nbsp;&bull;&nbsp;<a href='http://dashb-aaaa-ssb.XXXXX.ch/dashboard/request.py/siteview'>SSB</a>" 
+      dashhtml += "<br>&nbsp;&bull;&nbsp;<a title='aaaa Computing and Muon Calibration Center' href='http://www.aglt2.org/csum.php'>AGLT2</a>" 
       dashhtml += "</div>"
       htmlstr += utils.addAccordion(dashheader,dashhtml)
 
@@ -485,8 +485,8 @@ class menu(pmModule):
       # ---------------------- Analytics -------------------------------
       analyticsheader = 'Analytics'
       analytichtml = divStyle
-      analytichtml +="<br>&nbsp;&bull;&nbsp;<a title='Project and Data Type Popularity for ATLAS Analysis Jobs' href='//pandamon.atlascloud.org/ppop'>Popularity</a>"
-      analytichtml +="<br>&nbsp;&bull;&nbsp;<a title='Timing distribution for ATLAS analysis job' href='//pandamon.atlascloud.org/ptimes'>Analysis Timing</a>"
+      analytichtml +="<br>&nbsp;&bull;&nbsp;<a title='Project and Data Type Popularity for aaaa Analysis Jobs' href='//pandamon.aaaacloud.org/ppop'>Popularity</a>"
+      analytichtml +="<br>&nbsp;&bull;&nbsp;<a title='Timing distribution for aaaa analysis job' href='//pandamon.aaaacloud.org/ptimes'>Analysis Timing</a>"
       analytichtml += "</div>"
       htmlstr += utils.addAccordion(analyticsheader,analytichtml)
       
@@ -541,7 +541,7 @@ class menu(pmModule):
        for h in   homemenu:
           txt += "<a href='%(url)s/%(item)s'>%(label)s</a><p>" % {"url" : version, "item" : h[0], "label" : h[1] }
        for h in   pandamonmenu:
-          txt += "<a href='%(url)s/%(item)s'>%(label)s</a><p>" % {"url" :"//pandamon.atlascloud.org", "item" : h[0], "label" : h[1] }
+          txt += "<a href='%(url)s/%(item)s'>%(label)s</a><p>" % {"url" :"//pandamon.aaaacloud.org", "item" : h[0], "label" : h[1] }
        user = self.server().user()   
        if user != None:
          txt += '<hr>User %s%s Protected Items:<hr>' % ( user[0].upper(),user[1:] )

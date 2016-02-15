@@ -22,7 +22,7 @@ class home(pmModule):
       try:
          classicUrl=self.config().config.classic['url']
       except:
-         classicUrl = "http://panda.cern.ch"
+         classicUrl = "http://panda.xxxx.xx"
       title = "Quick Guide to the Panda Monitor</a>"
       maintxt = "<div class='ui-corner-all ui-widget ui-widget-header' >"  +title+ "</div>"
       maintxt += "<p>For Panda documentation and information on support and problem reporting see \
@@ -31,8 +31,8 @@ class home(pmModule):
 #      for i in mond_conf.instances:
 #            maintxt += "<br><a href='%s'>%s</a>: %s" % ( i['url'], i['name'], i['desc'] )
       maintxt += "<a href='%s'>%s</a>: %s" % ( classicUrl, "CERN", "Primary production monitor at CERN" )
-      maintxt += "<br><a href='%s'>%s</a>: %s" % ( "http://pandamon.cern.ch", "NEW", "New production monitor at CERN" )
-      maintxt += "<br><a href='%s'>%s</a>: %s" % ( "http://pandamon-eu.atlascloud.org", "CLOUD", "Experimental monitor at <a href='http://aws.amazon.com/ec2'>EC2 cloud</a>" )
+      maintxt += "<br><a href='%s'>%s</a>: %s" % ( "http://pandamon.xxxx.xx", "NEW", "New production monitor at CERN" )
+      maintxt += "<br><a href='%s'>%s</a>: %s" % ( "http://pandamon-eu.aaaacloud.org", "CLOUD", "Experimental monitor at <a href='http://aws.amazon.com/ec2'>EC2 cloud</a>" )
       maintxt += "<p>"
       # activateAccordion
       maintxt += self.pageSection("Left Bar")
@@ -58,10 +58,10 @@ class home(pmModule):
       <br>%(AutoPilot)s Pilot submission system serving all of OSG and LCG
       <br>%(Sites)s Collection of grid-wide and site-level monitoring links
       <br>%(Analysis)s Information on Panda-based analysis using pathena
-      <br>%(Physics)s ATLAS data discovery and access info and tools for physicists
+      <br>%(Physics)s aaaa data discovery and access info and tools for physicists
       <!--- <br><b>Usage:</b> CPU usage by user -->
-      <br>%(ProdDash)s Link to the ARDA ATLAS production dashboard
-      <br>%(DDMDash)s Link to the ARDA ATLAS DDM dashboard
+      <br>%(ProdDash)s Link to the ARDA aaaa production dashboard
+      <br>%(DDMDash)s Link to the ARDA aaaa DDM dashboard
       <br>%(users)s Lists Panda users and gives an access to 'your' Panda page
       </div>
         """ %{'Production' :utils.activateAccordion('Production',opIndx,tooltip='"Operations"')
@@ -97,7 +97,7 @@ class home(pmModule):
         <p>%(Tasks)s Task request forms are provided for entering generic, event generation and CTB tasks. The full task list gives statistics on tasks by grid and a listing of all tasks.
         The task browser allows selection of tasks based on their metadata (physics type, production series, release, output type, etc.) with navigation to datasets associated with the task, where data availability and access information is provided.
         <p>%(Datasets)s Dataset searches can be done with the search form (with wildcards) or quick search (by name, no wildcards). Listings are available for input datasets (a short list; the datasets which are inputs to the tasks processed by Panda), output datasets (very long -- the datasets produced by Panda production -- but the task browser is more convenient for navigating to produced data), dispatch blocks (Panda internal), and all datasets. Long lists are truncated and useful only to get the overall count and a sample list.
-        <p>%(distribution)s Dataset replication requests, operational displays from ATLAS DDM Ops for distribution of AODs, RDOs, conditions data, real DAQ data, etc.
+        <p>%(distribution)s Dataset replication requests, operational displays from aaaa DDM Ops for distribution of AODs, RDOs, conditions data, real DAQ data, etc.
         <!-- 
            <p><b>Subscriptions:</b> Shows DQ2 subscriptions managed by Panda, which handle Panda's data movement. 'Dispatch blocks' are used to dispatch data to processing sites in advance of processing; destination blocks are used to route outputs to archival storage.
            <p><b>Sites:</b> Configuration details of sites. Site pages provide access to monitors, jobs running at the site, DQ2 configuration, etc.
@@ -126,11 +126,11 @@ class home(pmModule):
       maintxt = """
    <div style="width:600px; float:left; padding:5px;">
    <div class='ui-widget ui-widget-content ui-corner-all' style="padding:7px;" >
-   This is a <a href="https://indico.cern.ch/getFile.py/access?contribId=4&resId=0&materialId=slides&confId=202874">new Panda Web Platform</a> based Monitor that is more maintainable,
+   This is a <a href="https://indico.xxxx.xx/getFile.py/access?contribId=4&resId=0&materialId=slides&confId=202874">new Panda Web Platform</a> based Monitor that is more maintainable,
    supports the <a href="http://www.json.org/">json<a/>/<a href="http://jquery.com">jQuery</a> architecture 
    of ADC monitoring, is easily extensible, and integrates
    well with other ADC monitoring tools and components.
-   <p> <b><a href="http://panda.cern.ch">Go to the "Classic Panda" </a></b>
+   <p> <b><a href="http://panda.xxxx.xx">Go to the "Classic Panda" </a></b>
    </div>
    <p>
    <div class='ui-widget-header ui-corner-top' style="padding:7px;">
@@ -154,8 +154,8 @@ class home(pmModule):
      so monitor modules can serve as either web page builders, or json data providers or the rendering 
      function providers or all above
    <li> The platform  is backward compatible with the classic Panda  Monitor. It does support the legacy "classic" Panda Monitor Interface.
-   <br> For example, the  3 different URLs, the classic one : <a href="http://panda.cern.ch?dash=prod">http://panda.cern.ch?dash=prod</a> and the new 
-    <a href="http://pandamon.cern.ch?dash=prod">http://pandamon.cern.ch?dash=prod</a> and <a href="http://pandamon-eu.atlascloud.org?dash=prod">http://pandamon-eu.atlascloud.org?dash=prod</a>   
+   <br> For example, the  3 different URLs, the classic one : <a href="http://panda.xxxx.xx?dash=prod">http://panda.xxxx.xx?dash=prod</a> and the new 
+    <a href="http://pandamon.xxxx.xx?dash=prod">http://pandamon.xxxx.xx?dash=prod</a> and <a href="http://pandamon-eu.aaaacloud.org?dash=prod">http://pandamon-eu.aaaacloud.org?dash=prod</a>   
     generate the same  "classic" Web page
    </div>
    </div>
@@ -167,8 +167,8 @@ class home(pmModule):
       maintxt = """
    <div id="tabs">
    <ul>
-      <li><a href="#tabs-2">Quick guide to the<a href='https://twiki.cern.ch/twiki/bin/view/PanDA/PandaPlatform'>PanDA Monitor</a></a></li>
-      <li><a href="#tabs-1"><a href='https://twiki.cern.ch/twiki/bin/view/PanDA/PandaPlatform'>PanDA monitor ( to be decommissioned )</a></a></li>
+      <li><a href="#tabs-2">Quick guide to the<a href='https://twiki.xxxx.xx/twiki/bin/view/PanDA/PandaPlatform'>PanDA Monitor</a></a></li>
+      <li><a href="#tabs-1"><a href='https://twiki.xxxx.xx/twiki/bin/view/PanDA/PandaPlatform'>PanDA monitor ( to be decommissioned )</a></a></li>
    </ul>
    <div id="tabs-1">
       %(new)s
@@ -189,7 +189,7 @@ class home(pmModule):
    def doQuery(self,config=None):
        """ Process the query request 
        <ul>
-        <li>Click <a href="http://pandamon.cern.ch/alist">here to see the <b>"List of all available Monitor Modules"</b></a>
+        <li>Click <a href="http://pandamon.xxxx.xx/alist">here to see the <b>"List of all available Monitor Modules"</b></a>
        </ul>
        """
        title = 'PanDA monitor ( new )'

@@ -16,16 +16,14 @@ class contactus(pmModule):
       self.publishUI(self.doScript,role=pmRoles.script())
    #______________________________________________________________________________________      
    def message(self, pandaid, message=None,host=None,timestamp=None,errorcode=None):
-      # http://panda.cern.ch/server/pandamon/query?overview=viewlogfile&nocachemark=yes&guid=f2faca03-d2c2-46b6-ac4d-70ea625e26f9&lfn=log.01220398._099983.job.log.tgz.1&site=AGLT2_PRODDISK
-      # https://pandamon.atlascloud.org/logmonitor?site=panda.mon.prod&message=1770799963*
       if message == None: message = ''
-      jobfiles = 'http://pandamon.cern.ch/joblfn?jobs=%d&type=*' % int(pandaid[0])
-      joblink =  'http://pandamon.cern.ch/jobinfo?job=%d' % int(pandaid[0])
+      jobfiles = 'xxxxxxxxxx' % int(pandaid[0])
+      joblink =  'xxxxxxxxx' % int(pandaid[0])
       tasklink  = ''
       errorLink = ''
       try:
-         tasklink =  '"http://pandamon.cern.ch/jobinfo?jobsetID=%(taskid)s&prodUserName=%(user)s&jobStatus=failed&hours=100"' % {  'taskid': pandaid[1], 'user': pandaid[2] }
-         errorLink = 'http://pandamon.cern.ch/jobs/joberror?jobtype=*&item=jobsetID&prodUserName=%(user)s&hours=72&opt=sum+item+time' %  { 'user': pandaid[2] }
+         tasklink =  '"xxxxxxxxx' % {  'taskid': pandaid[1], 'user': pandaid[2] }
+         errorLink = 'xxxxxxxxx' %  { 'user': pandaid[2] }
       except:
          pass
       msg = 'Dear DAST Helpers.\r\nI do not understand the reason of the job error: \r\n%s. \r\n %s \r\n See: %s \r\n     %s \r\n      %s \r\n with %s files.\r\n' % (errorcode, message,  joblink, tasklink, errorLink, jobfiles)
@@ -38,8 +36,8 @@ class contactus(pmModule):
    #______________________________________________________________________________________      
    def signature(self):
       msg  = "\r\nThank you, %s \n%s UTC" %(self.server().user(),  datetime.utcnow().strftime("%m-%d %H:%M:%S") )
-      msg += "\n----\nCheck the user's section https://twiki.cern.ch/twiki/bin/viewauth/AtlasComputing/AtlasDAST#What_do_we_need_to_know_Support "
-      msg += "\nPlease subscribe to the DAST mailing list for followups: https://groups.cern.ch/group/hn-atlas-dist-analysis-help/default.aspx"
+      msg += "\n----\nCheck the user's section https://twiki.xxxx.xx/twiki/bin/viewauth/aaaaComputing/aaaaDAST#What_do_we_need_to_know_Support "
+      msg += "\nPlease subscribe to the DAST mailing list for followups: https://groups.xxxx.xx/group/hn-aaaa-dist-analysis-help/default.aspx"
       msg += "\n---\n     Sent from my Panda Monitor Web Page"
       return msg
 
@@ -70,8 +68,8 @@ class contactus(pmModule):
             msg += self.signature()
             subject = self.subject(pandaid)
             toaddrs = ''
-            if test == None: toaddrs = 'atlasdast@gmail.com hn-atlas-dist-analysis-help@cern.ch '
-#            toaddrs+='%s %s %s' % ('Alden.Stradling@cern.ch', 'val.fine@gmail.com', mail)
+            if test == None: toaddrs = 'aaaadast@gmail.com hn-aaaa-dist-analysis-help@xxxx.xx '
+#            toaddrs+='%s %s %s' % ('Alden.Stradling@xxxx.xx', 'val.fine@gmail.com', mail)
             toaddrs+='%s %s' % ( 'val.fine@gmail.com', mail)
             main['message'] = msg;
             main['subject'] = subject if test==None else 'Test: %s ' % subject

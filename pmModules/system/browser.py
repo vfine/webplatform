@@ -10,7 +10,7 @@ import pmUtils.pmUtils as utils
 from  pmCore.pmModule import pmModule as pmModule
 
 #   if (window.crypto) window.crypto.logout();
-#   https://login.cern.ch/adfs/ls/?wa=wsignout1.0 logout link for https
+#   https://login.xxxx.xx/adfs/ls/?wa=wsignout1.0 logout link for https
 _dummyMain="<center> . . . Downloading . . . </center>"
 _dummyTitle='PanDA monitor ( new )'
 #________________________________________________________________________
@@ -119,9 +119,9 @@ class browser(pmModule):
 
    #    if os.environ.has_key('HOSTNAME'): htmlstr += "<br> &nbsp; &nbsp; Host: %s" % os.environ.get("HOSTNAME")
        htmlstr += """
-   <br> &nbsp; &nbsp; <a href='https://savannah.cern.ch/bugs/?func=additem&group=panda'>Report a problem</a>
-        &nbsp; &nbsp; <a href='mailto:hn-atlas-dist-analysis-help@cern.ch'>Email list for help</a>
-   <br> &nbsp; &nbsp; <a href='mailto:atlas-adc-pandamon-support@cern.ch'>Webmaster</a></div>
+   <br> &nbsp; &nbsp; <a href='https://savannah.xxxx.xx/bugs/?func=additem&group=panda'>Report a problem</a>
+        &nbsp; &nbsp; <a href='mailto:hn-aaaa-dist-analysis-help@xxxx.xx'>Email list for help</a>
+   <br> &nbsp; &nbsp; <a href='mailto:aaaa-adc-pandamon-support@xxxx.xx'>Webmaster</a></div>
    """
 
        analytics = """
@@ -203,7 +203,7 @@ class browser(pmModule):
        if mode == "html":
            sc = pmstate().script
            if sc != '': sc =  "<br><small>(%s's version)</small>" % sc[2:] 
-           leftbox = " <a title='Go to the site home page' href='%s'>PanDA Monitor</a> %s<br><div style='font-size: 12px; font-weight: normal'>Times are in UTC</div>" % ( "http://pandamon.cern.ch", sc)
+           leftbox = " <a title='Go to the site home page' href='%s'>PanDA Monitor</a> %s<br><div style='font-size: 12px; font-weight: normal'>Times are in UTC</div>" % ( "http://pandamon.xxxx.xx", sc)
            topbar = self.buildDashboards()
            menu = self.buildMenu()
            return self.buildMainFull(title, menuinfo, navtxt, menu, maintxt,
@@ -247,7 +247,7 @@ class browser(pmModule):
       out = '[%s]' % out 
       return out
        
-   def buildMainFull(self,title='<a href="http://pandamon.cern.ch">PanDA Monitor</a>', menuinfo=None, nav=None, menu=None,
+   def buildMainFull(self,title='<a href="http://pandamon.xxxx.xx">PanDA Monitor</a>', menuinfo=None, nav=None, menu=None,
                  main=None, topleft=None,leftbox=None,upleft=None,
                  upright=None,titleleft='',navright=None,topbar=None):
        """ Build main page """
@@ -368,11 +368,11 @@ class browser(pmModule):
         <div class="jedititle"><span class="jedititle">JEDI is the default analysis backend since August 12 2014!</span></div>
         <br/><br/>
         JEDI tasks/jobs can be monitored on 
-        <a href="http://bigpanda.cern.ch/" target="_blank">http://bigpanda.cern.ch/</a>. <br/>
+        <a href="http://bigpanda.xxxx.xx/" target="_blank">http://bigpanda.xxxx.xx/</a>. <br/>
         Submission to JEDI is the default setup using Panda/Ganga tools from CVMFS since August 12, 2014!<br/>
         <br/>
         JEDI instruction are available on TWiki
-        <a href="https://twiki.cern.ch/twiki/bin/view/PanDA/PandaJediAnalysis"
+        <a href="https://twiki.xxxx.xx/twiki/bin/view/PanDA/PandaJediAnalysis"
     target="_blank">PandaJediAnalysis</a>.
         <br/><br/><br/><br/>
     </td>
@@ -492,7 +492,7 @@ class browser(pmModule):
                    } else if (adfs != undefined) {
                       var lg = $('#loginID');
                       lg.attr('title', adfs + ' logout');
-                      lg.click(function() { $(this).hide(); window.location ='https://login.cern.ch/adfs/ls/?wa=wsignout1.0';});
+                      lg.click(function() { $(this).hide(); window.location ='https://login.xxxx.xx/adfs/ls/?wa=wsignout1.0';});
                       lg.show();
                    }
                   %(status)s
